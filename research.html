@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah Kwicklis | Research</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function toggleAbstract(id) {
+            var abstract = document.getElementById(id);
+            var button = abstract.nextElementSibling;
+            if (abstract.style.display === "none" || abstract.style.display === "") {
+                abstract.style.display = "block";
+                button.textContent = "Hide Abstract";
+            } else {
+                abstract.style.display = "none";
+                button.textContent = "See Abstract";
+            }
+        }
+    </script>
+
+    
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        button {
+            background-color: white;
+            color: navy;
+            padding: 5px 10px;
+            border: 1px solid navy;
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Noah Kwicklis</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="research.html">Research</a>
+        </nav>
+    </header>
+    <section>
+        <h2>Research</h2>
+        <h3>Working Papers</h3>
+        <ul>
+            <li> 
+                <a href="workingpapers/FiscalHANK-DRAFT.pdf" target="_blank">Transfer Payments, Sacrifice Ratios, and Inflation in a Fiscal Theory HANK</a>
+                <p class="abstract hidden" id="abstract1">
+                    The Fiscal Theory of the Price Level (FTPL) stipulates that fiscal policy can play an
+                    important role in determining prices and the path of inflation, potentially with significant
+                    effects on real variables in settings where the classical dichotomy does not hold. However,
+                    previous papers on FTPL have largely abstracted away from wealth and income inequality –
+                    leaving open questions about how active fiscal policy could affect and be affected by household
+                    heterogeneity. To bridge this gap, I numerically solve a calibrated canonical Heterogeneous
+                    Agent New-Keynesian (HANK) model that features nominal rigidities, incomplete markets,
+                    hand-to-mouth households, nominal long-term government debt, and active fiscal policy to
+                    consider how taxes and transfers to and from different members of the population can have
+                    markedly different consequences for both aggregate output and employment – and for the path
+                    of inflation, but not the cumulative amount of inflation overall. The numerical simulations thus
+                    indicate that taxes on low-marginal propensity to consume (MPC) high-income households
+                    can cool inflation at a lower cost to employment and output than the trade-off incurred by
+                    raising interest rates or by raising taxes more broadly. Conversely, the model predicts that
+                    stimulus checks to low-income high-MPC households generate more immediate inflation, but
+                    also a significantly stronger boom in real gross domestic product, both in absolute terms and
+                    in terms of GDP growth per percentage point of inflation accumulated. In general, spending
+                    programs of similar sizes can cause different responses to output depending on their recipients,
+                    but generate approximately the same cumulative amount of overall inflation, as they produce
+                    similar amounts of unbacked debt that must be inflated away in the FTPL environment. While
+                    there are forces that make transfers to high-MPC households less inflationary in the presence
+                    of automatic stabilizers, the model predicts that the differences are small.                </p>
+                <button onclick="toggleAbstract('abstract1')">See Abstract</button>
+            </li>
+        </ul>
+        <h3>Blog Posts</h3>
+        <ul>
+            <li><a href="https://libertystreeteconomics.newyorkfed.org/2018/04/will-new-steel-tariffs-protect-us-jobs/">Will New Steel Tariffs Protect U.S. Jobs?</a> <em>with Mary Amiti and Sebastian Heise</em> </li> 
+            <li><a href="https://libertystreeteconomics.newyorkfed.org/2019/01/the-impact-of-import-tariffs-on-us-domestic-prices/">The Impact of Import Tariffs on U.S. Domestic Prices</a> <em>with Mary Amiti and Sebastian Heise</em> </em></li>
+            <!-- Add more blog posts here -->
+        </ul>
+    </section>
+</body>
+
+</html>
