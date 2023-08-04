@@ -26,9 +26,32 @@
             section {
                 padding: 20px;
             }
+
+            img {
+                float: none;
+                max-width: 100%;
+            }
+        }
+
+        /* Add styles for larger screens */
+        @media (min-width: 768px) {
+            section {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            img {
+                float: left;
+                margin-right: 20px;
+                max-width: 300px;
+                max-height: 200px;
+            }
+
+            p {
+                flex: 1;
+            }
         }
     </style>
-
 </head>
 
 <body>
@@ -40,16 +63,16 @@
             <a href="research.html">Research</a>
         </nav>
     </header>
-    <section class="two-columns">
-        <div class="left-column">
-            <h2>About me</h2>
-            <p>
-                I am a 5th year PhD student studying macroeconomics at UCLA, with a broad research interest in monetary and fiscal policy, labor markets, inequality, and business cycles. My current work primarily revolves around solving heterogeneous agent models of the macroeconomy. Before starting my degree at UCLA, I was a research analyst at the Federal Reserve Bank of New York, where I worked on topics related to empirical trade economics, applied microeconomics, and household finance.
-            </p>
-        </div>
-        <div class="right-column">
-            <img src="misc/noah.jpg" alt="Me.">
-        </div>
+    <section>
+        <h2>About Me</h2>
+        <img src="misc/noah.jpg" alt="Me.">
+        <p>
+            I am a 5th year PhD student studying macroeconomics at UCLA, with a broad research interest in monetary and fiscal
+            policy, labor markets, inequality, and business cycles. My current work primarily revolves around solving heterogeneous
+            agent models of the macroeconomy. Before starting my degree at UCLA, I was a research analyst at the Federal Reserve
+            Bank of New York, where I worked on topics related to empirical trade economics, applied microeconomics, and household
+            finance.
+        </p>
     </section>
 </body>
 
