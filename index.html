@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Add styles for mobile devices */
-        @media (max-width: 767px) {
+            @media (max-width: 767px) {
             header {
                 text-align: center;
             }
@@ -31,7 +31,26 @@
                 float: none;
                 max-width: 100%;
             }
-        }
+            }
+
+            /* Add styles for larger screens */
+            @media (min-width: 768px) {
+            section {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            img {
+                float: left;
+                margin-right: 20px;
+                max-width: 200px; /* Adjust the size as needed */
+                max-height: 150px; /* Adjust the size as needed */
+            }
+
+            p {
+                flex: 1;
+            }
+            }
 
         /* Add styles for larger screens */
         @media (min-width: 768px) {
