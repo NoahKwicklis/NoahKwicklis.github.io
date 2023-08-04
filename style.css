@@ -3,6 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #F2F2F2;
+    /* Off-white background color */
 }
 
 header {
@@ -43,25 +45,20 @@ section {
         text-align: center;
     }
 
-    nav {
-        display: block;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 0 10px;
-    }
-
-    section {
-        padding: 20px;
-    }
-
     img {
         display: block;
         margin: 0 auto;
         max-width: 100%;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        margin: 0 5px;
     }
 }
 
@@ -76,9 +73,9 @@ section {
     img {
         order: 2;
         margin-left: 20px;
-        max-width: 200px;
+        max-width: 300px;
         /* Adjust the size as needed for desktop */
-        max-height: 150px;
+        max-height: 200px;
         /* Adjust the size as needed for desktop */
     }
 
