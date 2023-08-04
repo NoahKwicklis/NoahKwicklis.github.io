@@ -29,6 +29,23 @@ nav a {
     margin: 5px;
 }
 
+/* Make the navigation buttons side-by-side on mobile */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+
 section {
     padding: 20px;
     max-width: 800px;
@@ -50,20 +67,4 @@ ul {
 
 li {
     margin-bottom: 10px;
-}
-
-/* Responsive styles (adjust as needed) */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 28px;
-    }
-
-    nav {
-        display: flex;
-        justify-content: center;    
-    }
-    nav a {
-        display: inline-block;
-        margin: 5px;
-    }
 }
