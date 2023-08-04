@@ -1,91 +1,69 @@
-/* Global Styles */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #F2F2F2;
-    /* Off-white background color */
+    background-color: #f9f9f9;
 }
 
 header {
-    background-color: #19264D;
-    /* Dark blue header color */
-    color: #FFFFFF;
-    /* White text color for the header */
-    padding: 10px;
+    background-color: #1c4a7e;
+    padding: 20px;
+    color: white;
+    text-align: center;
 }
 
 header h1 {
+    font-size: 36px;
     margin: 0;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 nav a {
-    color: #FFFFFF;
-    /* White text color for navigation links */
+    color: white;
     text-decoration: none;
-    margin: 0 10px;
-}
-
-nav a:hover {
-    text-decoration: underline;
+    padding: 10px;
+    margin: 5px;
 }
 
 section {
     padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Mobile Styles */
-@media (max-width: 767px) {
-    header {
-        text-align: center;
-    }
+h2 {
+    color: #1c4a7e;
+    border-bottom: 1px solid #1c4a7e;
+    padding-bottom: 5px;
+}
 
-    img {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Responsive styles (adjust as needed) */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
     }
 
     nav {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 10px;
+        display: block;
     }
 
     nav a {
-        margin: 0 5px;
-    }
-}
-
-/* Tablet and Desktop Styles */
-@media (min-width: 768px) {
-    section {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    img {
-        order: 2;
-        margin-left: 20px;
-        max-width: 300px;
-        /* Adjust the size as needed for desktop */
-        max-height: 200px;
-        /* Adjust the size as needed for desktop */
-    }
-
-    p {
-        order: 1;
-        flex: 1;
-    }
-
-    h2 {
-        flex-basis: 100%;
-        /* Ensure "Welcome" header takes full width */
+        display: block;
+        margin: 5px;
     }
 }
