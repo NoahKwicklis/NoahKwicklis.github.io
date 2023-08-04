@@ -59,11 +59,11 @@ li {
     }
 
     nav {
-        display: block;
+        display: flex;
+        justify-content: center;    
     }
-
     nav a {
-        display: block;
+        display: inline-block;
         margin: 5px;
     }
 }
