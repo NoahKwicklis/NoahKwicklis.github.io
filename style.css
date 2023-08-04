@@ -3,11 +3,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #F2F2F2;
+    /* Off-white background color */
 }
 
 header {
     background-color: #19264D;
+    /* Dark blue header color */
     color: #FFFFFF;
+    /* White text color for the header */
     padding: 10px;
 }
 
@@ -22,6 +26,7 @@ nav {
 
 nav a {
     color: #FFFFFF;
+    /* White text color for navigation links */
     text-decoration: none;
     margin: 0 10px;
 }
@@ -34,7 +39,7 @@ section {
     padding: 20px;
 }
 
-/* Mobile Styles */
+/* Mobile and Tablet/Desktop Styles */
 @media (max-width: 767px) {
     header {
         text-align: center;
@@ -47,18 +52,17 @@ section {
     }
 
     nav {
-        display: block;
-        text-align: center;
+        display: flex;
+        justify-content: center;
         margin-bottom: 10px;
     }
 
     nav a {
-        display: inline-block;
-        margin: 0 10px;
+        margin: 0 5px;
     }
 }
 
-/* Tablet and Desktop Styles */
+/* Additional styles for Tablet and Desktop */
 @media (min-width: 768px) {
     section {
         display: flex;
