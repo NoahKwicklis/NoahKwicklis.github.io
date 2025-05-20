@@ -68,3 +68,23 @@ ul {
 li {
   margin-bottom: 10px;
 }
+
+.publication-meta {
+  font-size: 0.95em;
+  color: #000;
+  margin-bottom: 1em;
+}
+
+.publication-meta span[itemprop="headline"] {
+  font-weight: bold;
+  color: #003366;
+}
+
+.publication-meta em,
+.publication-meta time,
+.publication-meta span[itemprop="volumeNumber"],
+.publication-meta span[itemprop="pageStart"] {
+  margin-left: 0.3em;
+  font-style: normal;
+}
+
