@@ -7,62 +7,40 @@
     <title>Noah Kwicklis</title>
     <link rel="stylesheet" href="style.css">
     <style>
-    /* Add styles for mobile devices */
+        /* Mobile styles */
         @media (max-width: 767px) {
-        header {
-            text-align: center;
+            header { text-align: center; }
+            nav { display: flex; justify-content: center; margin-bottom: 10px; }
+            nav a { display: inline-block; margin: 0 10px; }
+            section { padding: 20px; }
+            img { display: block; margin: 0 auto; max-width: 100%; }
         }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 10px;
-        }
-
-        nav a {
-            display: inline-block;
-            margin: 0 10px;
-        }
-
-        section {
-            padding: 20px;
-        }
-
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-        }
-        }
-
-        /* Add styles for larger screens */
+        /* About Me layout on larger screens */
         @media (min-width: 768px) {
-            section {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-            }
-
-            img {
-                order: 2;
-                margin-left: 20px;
-                max-width: 350px;
-                /* Adjust the size as needed */
-                max-height: 250px;
-                /* Adjust the size as needed */
-            }
-
-            p {
-                order: 1;
-                flex: 1;
-            }
-
-            h2 {
-                flex-basis: 100%;
-                /* Ensure "About Me" header takes full width */
+            .about-section { display: flex; flex-wrap: wrap; align-items: center; }
+            .about-section img { order: 2; margin-left: 20px; max-width: 350px; max-height: 250px; }
+            .about-section p { order: 1; flex: 1; }
+            .about-section h2 { flex-basis: 100%; }
+        }
+        /* Research page styles */
+        .hidden { display: none; }
+        button { background-color: white; color: navy; padding: 5px 10px; border: 1px solid navy; cursor: pointer; }
+        /* Ensure research section flows normally */
+        #research { display: block; }
+    </style>
+    <script>
+        function toggleAbstract(id) {
+            var abstract = document.getElementById(id);
+            var button = document.querySelector('button[data-target="'+id+'"]');
+            if (abstract.style.display === "none" || abstract.style.display === "") {
+                abstract.style.display = "block";
+                button.textContent = "Hide Abstract";
+            } else {
+                abstract.style.display = "none";
+                button.textContent = "See Abstract";
             }
         }
-    </style>
+    </script>
 </head>
 
 <body>
@@ -71,19 +49,89 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="cv.html">CV</a>
-            <a href="research.html">Research</a>
+            <a href="index.html#research">Research</a>
             <a href="teaching.html">Teaching</a>
         </nav>
     </header>
-    <section>
+
+    <section class="about-section" id="about">
         <h2>About Me</h2>
         <p>
-            I am a 6th year PhD student studying macroeconomics at UCLA, with a broad research interest in monetary and fiscal
-            policy, labor markets, inequality, and business cycles. My current work primarily involves heterogeneous
-            agent models of the macroeconomy. Before starting my degree at UCLA, I was a research analyst at the Federal Reserve
+            I am a PhD candidate at UCLA currently on the market for the 2025-2026 academic year. My current work primarily involves solving and estimating heterogeneous
+            agent models of the macroeconomy to analyze fiscal and monetary policy. Before starting my degree at UCLA, I was a research analyst at the Federal Reserve
             Bank of New York, where I worked on topics related to empirical trade economics, applied microeconomics, and household
-            finance.        </p>
+            finance.
+        </p>
         <img src="misc/noah_rescale.jpg" alt="Me.">
+    </section>
+
+    <section id="research">
+        <h2>Research</h2>
+
+        <h3>Publications</h3>
+        <ul>
+            <li>
+                <p class="publication-meta">
+                    <strong>Active vs. passive policy and the trade-off between output and inflation in HANK</strong>.
+                    <i>Journal of Monetary Economics</i>, April 2025, Vol. 151. Article 103732.
+                </p>
+                <p class="abstract hidden" id="abstract1">
+                    When fiscal policy is active and monetary policy is passive in a heterogeneous agent New Keynesian (HANK) model, deficit-financed transfers to low-asset households lead to similar cumulative inflation but greater increases in real output than transfers to wealthier households. I use the inverse of the “Phillips multiplier”, the price level sacrifice ratio, to quantify this dynamic. Household heterogeneity and targeted policy change the timing of output gaps, making this consistent with the Phillips Curve and rendering conventional sacrifice ratio intuition misleading for assessing the inflation/output trade-off between policies.
+                </p>
+                <button data-target="abstract1" onclick="toggleAbstract('abstract1')">See Abstract</button>
+                <button onclick="window.open('https://www.sciencedirect.com/science/article/pii/S0304393225000030','_blank','noopener,noreferrer')">Published version</button>
+            </li>
+        </ul>
+
+        <h3>Working Papers</h3>
+        <ul>
+            <li>Unemployment and Inflation: A Bayesian HANK Approach</li>
+            <li>
+                <a href="workingpapers/Solving_Non_FIRE_Models_in_State_Space.pdf" target="_blank">
+                    A convenient method to solve state-space HANK models with sticky expectations (in continuous time)
+                </a>
+                <p class="abstract hidden" id="abstract_stickyexp">
+                Full information rational expectations heterogeneous agent models can be easily converted into a sticky expectations environment, even when solved in state-space form. The technique recycles the Jacobians of the full information model with only a few modifications. The process is greatly simplified by working in continuous time, which facilitates the use of natural boundary conditions to ensure agents do not violate idiosyncratic borrowing constraints and the measure of updating agents at any given moment is zero. After solving the full information model, the conversion to sticky expectations takes only a few additional lines of code.
+                </p>
+                <button data-target="abstract_stickyexp" onclick="toggleAbstract('abstract_stickyexp')">See Abstract</button>
+            </li>
+        </ul>
+
+        <h3>Conference Presentations</h3>
+        <ul>
+            <li>
+                <a href="slides/NASM2024_Fiscal_HANK.pdf">
+                    Fiscal HANK Presentation, Econometric Society's 2024 North American Summer Meeting (NASM)
+                </a>
+            </li>
+        </ul>
+
+        <h3>Blog Posts</h3>
+        <ul>
+            <li>
+                <a href="https://libertystreeteconomics.newyorkfed.org/2018/04/will-new-steel-tariffs-protect-us-jobs/">
+                    Will New Steel Tariffs Protect U.S. Jobs?
+                </a> <em>with Mary Amiti and Sebastian Heise</em>
+            </li>
+            <li>
+                <a href="https://libertystreeteconomics.newyorkfed.org/2019/01/the-impact-of-import-tariffs-on-us-domestic-prices/">
+                    The Impact of Import Tariffs on U.S. Domestic Prices
+                </a> <em>with Mary Amiti and Sebastian Heise</em>
+            </li>
+        </ul>
+
+        <h3>Dormant Working Papers</h3>
+        <ul>
+            <li>
+                <a href="workingpapers/EITC_and_Mental_Health_Paper.pdf" target="_blank">
+                    Poverty, the EITC, and the Mental Health of Children and Adolescents
+                </a>
+                <p class="abstract hidden" id="abstract_EITC">
+                    I hypothesize that cash transfers to poor households improve the mental health of recipient children. Specifically, I posit that the 1993 Omnibus Budget Reconciliation Act’s expansion of the Earned Income Tax Credit (EITC) could have worked through a number of mechanisms to reduce the incidence of depression, anxiety, and antisocial behavior among children in eligible households, as reported by broad survey indexes. To test this claim, I estimate the intent-to-treat (ITT) effect of the EITC using a difference-in-differences (DID) identification strategy, with linear controls and household and region fixed effects. I find evidence that the federal tax credit expansion reduced externalizing behavior and tendencies among low-income children.
+                </p>
+                <button data-target="abstract_EITC" onclick="toggleAbstract('abstract_EITC')">See Abstract</button>
+            </li>
+        </ul>
     </section>
 </body>
 
