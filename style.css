@@ -95,3 +95,26 @@ li {
   margin-top: 0;          
   margin-bottom: 0.5em; 
 }
+
+
+
+footer {
+  background-color: #1c4a7e;   /* Same navy blue as header */
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #cce0ff; /* light blue link tone */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
